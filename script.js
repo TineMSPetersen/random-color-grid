@@ -4,4 +4,4 @@ console.log(elements);
 
 
 // Adds event listener to activate when the square is clicked
-elements.addEventListener('click, changeColor()');
+elements.addEventListener('click', changeColor());
