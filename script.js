@@ -1,14 +1,20 @@
-// Selects all the squares
-const elements = document.querySelectorAll('.element')
-console.log(elements);
+// Selects all elements with the class .element
+const elements = document.querySelectorAll('.element');
 
-//Function to change background color
-function changeColor() {
+// Creates the function colorChange()
+function colorChange() {
+    
+    // creates a function that will return a randomised hex code
+    function getColor() {
     let randomColor = Math.floor(Math.random()*16777215).toString(16);
-    console.log(randomColor);
-}
+    return randomColor;
+    }
 
-// Add event listener to each of .element
+    // Applies the styling to the clicked element
+    event.target.style.backgroundColor = '#' + getColor();
+};
+
+// Applies eventlistener to each of the .element elements and tells it to execute "colorChange() when clicked
 for (element of elements) {
-    element.addEventListener('click', changeColor);
+    element.addEventListener('click', colorChange);
 }
