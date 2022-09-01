@@ -15,6 +15,6 @@ function colorChange() {
 };
 
 // Applies eventlistener to each of the .element elements and tells it to execute "colorChange() when clicked
-for (element of elements) {
+elements.forEach((element) => {
     element.addEventListener('click', colorChange);
-}
+})
